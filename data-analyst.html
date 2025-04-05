@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GENIVA AI - Data Analyst</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="enhanced_styles.css">
+</head>
+<body class="font-poppins bg-gray-900 text-white">
+    <!-- Sidebar same as other pages -->
+    
+    <div class="main-content">
+        <div class="max-w-6xl mx-auto py-8 px-4">
+            <div class="flex items-center mb-8">
+                <i class="fas fa-chart-bar text-3xl text-cyan-500 mr-4"></i>
+                <h1 class="text-3xl font-bold">Data Analyst</h1>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <div class="bg-gray-800/70 rounded-2xl p-6 border border-gray-700/50 shadow-lg">
+                    <div class="border-2 border-dashed border-gray-600 rounded-xl p-8 text-center">
+                        <i class="fas fa-database text-4xl text-cyan-500 mb-4"></i>
+                        <p class="text-gray-400 mb-4">Upload your dataset (CSV, Excel, JSON)</p>
+                        <button class="px-6 py-2 bg-cyan-600 rounded-lg hover:bg-cyan-700 transition-colors">
+                            Select Files
+                        </button>
+                    </div>
+                    <div class="mt-4">
+                        <label class="block mb-2">Analysis Type</label>
+                        <select class="w-full bg-gray-700/50 rounded-lg p-3">
+                            <option>Trend Analysis</option>
+                            <option>Predictive Modeling</option>
+                            <option>Data Visualization</option>
+                            <option>Statistical Summary</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-800/70 rounded-2xl p-6 border border-gray-700/50 shadow-lg">
+                    <h3 class="text-xl font-semibold mb-4">Analysis Results</h3>
+                    <div class="data-results min-h-64 bg-gray-900/50 rounded-xl p-4">
+                        <p class="text-gray-400">Your data analysis will appear here...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
