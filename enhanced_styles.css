@@ -1,0 +1,80 @@
+/* Enhanced Sidebar */
+.sidebar {
+    width: 96px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: rgba(30, 30, 46, 0.95);
+    backdrop-filter: blur(16px);
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    overflow-y: auto;
+    z-index: 50;
+    transition: all 0.3s ease;
+    scrollbar-width: thin;
+    scrollbar-color: #8b5cf6 #1e1b4b;
+}
+
+.sidebar::-webkit-scrollbar {
+    width: 4px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+    background: #1e1b4b;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background-color: #8b5cf6;
+    border-radius: 2px;
+}
+
+.sidebar-icon {
+    width: 64px;
+    height: 64px;
+    margin: 12px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.sidebar-icon:hover {
+    background: rgba(70, 70, 100, 0.5);
+}
+
+.sidebar-icon.active {
+    background: rgba(139, 92, 246, 0.2);
+    border: 1px solid rgba(167, 139, 250, 0.3);
+    box-shadow: 0 0 15px rgba(139, 92, 246, 0.3);
+}
+
+.sidebar-icon i {
+    font-size: 20px;
+    color: #d1d5db;
+    margin-bottom: 6px;
+}
+
+.sidebar-icon.active i {
+    color: #a78bfa;
+}
+
+.sidebar-icon span {
+    font-size: 11px;
+    color: #9ca3af;
+}
+
+.sidebar-icon.active span {
+    color: #c4b5fd;
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 96px;
+    padding: 24px;
+    min-height: 100vh;
+}
+
+/* Rest of your existing styles... */
