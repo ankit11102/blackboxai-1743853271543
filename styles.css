@@ -1,0 +1,106 @@
+/* Base Styles */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background: #0f0f1a;
+    color: white;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 96px;
+    background: rgba(20, 20, 40, 0.7);
+    backdrop-filter: blur(10px);
+    border-right: 1px solid rgba(255,255,255,0.1);
+    height: 100vh;
+    position: fixed;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.sidebar-icon {
+    width: 64px;
+    height: 64px;
+    margin: 12px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(145deg, #1e1e2e, #1a1a2e);
+    border-radius: 16px;
+    border: 1px solid rgba(167, 139, 250, 0.2);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.sidebar-icon:hover {
+    transform: scale(1.1);
+    background: rgba(139, 92, 246, 0.2);
+    border-color: rgba(167, 139, 250, 0.4);
+}
+
+.sidebar-icon i {
+    font-size: 24px;
+    color: #a78bfa;
+    margin-bottom: 6px;
+}
+
+.sidebar-icon span {
+    font-size: 11px;
+    color: rgba(255,255,255,0.7);
+}
+
+.sidebar-icon.active {
+    background: rgba(139, 92, 246, 0.3);
+    border-color: rgba(167, 139, 250, 0.6);
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
+}
+
+.sidebar-panel {
+    position: fixed;
+    left: 96px;
+    top: 0;
+    bottom: 0;
+    width: 320px;
+    background: rgba(30, 30, 46, 0.9);
+    backdrop-filter: blur(10px);
+    border-right: 1px solid rgba(255,255,255,0.1);
+    padding: 20px;
+    overflow-y: auto;
+    display: none;
+}
+
+.sidebar-panel.active {
+    display: block;
+}
+
+/* URL Importer Panel */
+.url-importer-panel {
+    padding: 20px;
+}
+
+.url-importer-panel h3 {
+    font-size: 18px;
+    margin-bottom: 16px;
+    color: #a78bfa;
+}
+
+.url-input {
+    width: 100%;
+    padding: 12px 16px;
+    background: rgba(20, 20, 40, 0.7);
+    border: 1px dashed rgba(167, 139, 250, 0.4);
+    border-radius: 8px;
+    color: white;
+    margin-bottom: 16px;
+}
+
+/* Rest of your existing styles... */
