@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GENIVA AI - Text GPT</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="enhanced_styles.css">
+</head>
+<body class="font-poppins bg-gray-900 text-white">
+    <!-- Enhanced Sidebar -->
+    <div class="sidebar">
+        <div class="p-4 flex flex-col items-center space-y-6">
+            <!-- Website Builder -->
+            <div class="sidebar-icon" onclick="location.href='builder.html'">
+                <i class="fas fa-globe text-xl"></i>
+                <span class="text-xs mt-1">Website</span>
+            </div>
+            
+            <!-- Text GPT (Active) -->
+            <div class="sidebar-icon active" onclick="location.href='text-gpt.html'">
+                <i class="fas fa-comment-dots text-xl"></i>
+                <span class="text-xs mt-1">Text GPT</span>
+            </div>
+            
+            <!-- AI Image -->
+            <div class="sidebar-icon" onclick="location.href='ai-image.html'">
+                <i class="fas fa-image text-xl"></i>
+                <span class="text-xs mt-1">AI Image</span>
+            </div>
+            
+            <!-- AI Video -->
+            <div class="sidebar-icon" onclick="location.href='ai-video.html'">
+                <i class="fas fa-video text-xl"></i>
+                <span class="text-xs mt-1">AI Video</span>
+            </div>
+            
+            <!-- Ghibli Art -->
+            <div class="sidebar-icon" onclick="location.href='ghibli-art.html'">
+                <i class="fas fa-paint-brush text-xl"></i>
+                <span class="text-xs mt-1">Ghibli Art</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="main-content">
+        <div class="model-container">
+            <h1 class="model-header">
+                <i class="fas fa-comment-dots text-blue-500"></i>
+                Text GPT
+            </h1>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <div class="bg-gray-800/50 rounded-xl p-6 border border-gray-700/50">
+                    <textarea class="w-full bg-gray-700/50 rounded-lg p-4 h-64 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Ask me anything..."></textarea>
+                    <button class="mt-4 px-6 py-3 bg-blue-600 rounded-lg hover:bg-blue-700 transition-colors w-full">
+                        Generate <i class="fas fa-bolt ml-2"></i>
+                    </button>
+                </div>
+                
+                <div class="bg-gray-800/50 rounded-xl p-6 border border-gray-700/50">
+                    <h3 class="text-xl font-semibold mb-4">Response</h3>
+                    <div class="response-area min-h-64 bg-gray-900/50 rounded-lg p-4">
+                        <p class="text-gray-400">Your AI-generated response will appear here...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
