@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GENIVA AI - Ghibli Art</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="enhanced_styles.css">
+    <style>
+        .ghibli-preview {
+            background: linear-gradient(135deg, #a5d8ff, #74c0fc);
+        }
+    </style>
+</head>
+<body class="font-poppins bg-gray-900 text-white">
+    <div class="model-container">
+        <h1 class="model-header">
+            <i class="fas fa-paint-brush text-green-500"></i>
+            Ghibli Art Generator
+        </h1>
+        
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <div class="bg-gray-800/50 rounded-xl p-6 border border-gray-700/50">
+                <div class="mb-4">
+                    <label class="block mb-2">Art Prompt</label>
+                    <textarea class="w-full bg-gray-700/50 rounded-lg p-4 h-32 focus:outline-none focus:ring-2 focus:ring-green-500" placeholder="Describe your Ghibli-style artwork..."></textarea>
+                </div>
+                <div class="grid grid-cols-2 gap-4 mb-4">
+                    <div>
+                        <label class="block mb-2">Style</label>
+                        <select class="w-full bg-gray-700/50 rounded-lg p-3">
+                            <option>Spirited Away</option>
+                            <option>Totoro</option>
+                            <option>Howl's Castle</option>
+                            <option>Princess Mononoke</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block mb-2">Color Palette</label>
+                        <select class="w-full bg-gray-700/50 rounded-lg p-3">
+                            <option>Pastel</option>
+                            <option>Vibrant</option>
+                            <option>Muted</option>
+                        </select>
+                    </div>
+                </div>
+                <button class="px-6 py-3 bg-green-600 rounded-lg hover:bg-green-700 transition-colors w-full">
+                    Create Art <i class="fas fa-magic ml-2"></i>
+                </button>
+            </div>
+            
+            <div class="bg-gray-800/50 rounded-xl p-6 border border-gray-700/50">
+                <h3 class="text-xl font-semibold mb-4">Ghibli Art Preview</h3>
+                <div class="ghibli-preview min-h-64 rounded-lg p-4 flex items-center justify-center">
+                    <p class="text-gray-700">Your Ghibli-style artwork will appear here...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
