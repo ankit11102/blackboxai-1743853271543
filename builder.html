@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GENIVA AI - Website Builder</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="enhanced_styles.css">
+    <style>
+        .builder-panel {
+            @apply bg-gray-800/70 rounded-2xl p-6 border border-gray-700/50 shadow-lg;
+            @apply transition-all duration-300;
+        }
+        .preview-window {
+            @apply bg-white rounded-lg overflow-hidden shadow-md;
+            height: 400px;
+        }
+        .browser-bar {
+            @apply h-3 bg-gray-200 flex items-center px-2;
+        }
+        .browser-dot {
+            @apply w-3 h-3 rounded-full mr-2;
+        }
+    </style>
+</head>
+<body class="font-poppins bg-gray-900 text-white">
+    <!-- Sidebar same as other pages -->
+    
+    <div class="main-content">
+        <div class="max-w-7xl mx-auto py-8 px-4">
+            <div class="flex items-center mb-8">
+                <i class="fas fa-globe text-4xl text-purple-500 mr-4"></i>
+                <h1 class="text-3xl font-bold">Website Builder</h1>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <!-- Settings Panel -->
+                <div class="builder-panel">
+                    <h2 class="text-xl font-semibold mb-4 flex items-center">
+                        <i class="fas fa-cog text-purple-400 mr-2"></i>
+                        Website Settings
+                    </h2>
+                    
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block mb-2">Website Name</label>
+                            <input type="text" class="w-full bg-gray-700/50 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-purple-500">
+                        </div>
+                        
+                        <div>
+                            <label class="block mb-2">Website Type</label>
+                            <select class="w-full bg-gray-700/50 rounded-lg p-3">
+                                <option>Portfolio</option>
+                                <option>Business</option>
+                                <option>E-commerce</option>
+                                <option>Blog</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label class="block mb-2">Color Scheme</label>
+                            <div class="grid grid-cols-5 gap-2">
+                                <div class="browser-dot bg-purple-500 border-2 border-purple-300"></div>
+                                <div class="browser-dot bg-blue-500"></div>
+                                <div class="browser-dot bg-green-500"></div>
+                                <div class="browser-dot bg-red-500"></div>
+                                <div class="browser-dot bg-yellow-500"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Content Panel -->
+                <div class="builder-panel">
+                    <h2 class="text-xl font-semibold mb-4 flex items-center">
+                        <i class="fas fa-edit text-purple-400 mr-2"></i>
+                        Content
+                    </h2>
+                    
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block mb-2">Main Description</label>
+                            <textarea class="w-full bg-gray-700/50 rounded-lg p-3 h-32 focus:outline-none focus:ring-2 focus:ring-purple-500" placeholder="Describe your website..."></textarea>
+                        </div>
+                        
+                        <div>
+                            <label class="block mb-2">Pages Needed</label>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-purple-600/20 text-purple-300 rounded-full text-sm">Home</span>
+                                <span class="px-3 py-1 bg-gray-700/50 text-gray-300 rounded-full text-sm">About</span>
+                                <span class="px-3 py-1 bg-gray-700/50 text-gray-300 rounded-full text-sm">Services</span>
+                                <span class="px-3 py-1 bg-gray-700/50 text-gray-300 rounded-full text-sm">Contact</span>
+                                <span class="px-3 py-1 bg-gray-700/50 text-gray-300 rounded-full text-sm">+ Add</span>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label class="block mb-2">Upload Assets</label>
+                            <div class="border-2 border-dashed border-gray-600 rounded-lg p-4 text-center">
+                                <i class="fas fa-cloud-upload-alt text-gray-500 mb-2"></i>
+                                <p class="text-sm text-gray-400">Drag & drop images or click to browse</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Preview Panel -->
+                <div class="builder-panel">
+                    <div class="flex justify-between items-center mb-4">
+                        <h2 class="text-xl font-semibold flex items-center">
+                            <i class="fas fa-desktop text-purple-400 mr-2"></i>
+                            Preview
+                        </h2>
+                        <div class="flex space-x-2">
+                            <button class="px-3 py-1 bg-gray-700 rounded-lg text-sm">
+                                <i class="fas fa-mobile-alt"></i>
+                            </button>
+                            <button class="px-3 py-1 bg-gray-700 rounded-lg text-sm">
+                                <i class="fas fa-tablet-alt"></i>
+                            </button>
+                            <button class="px-3 py-1 bg-purple-600 rounded-lg text-sm">
+                                <i class="fas fa-desktop"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="preview-window">
+                        <div class="browser-bar">
+                            <div class="browser-dot bg-red-500"></div>
+                            <div class="browser-dot bg-yellow-500"></div>
+                            <div class="browser-dot bg-green-500"></div>
+                        </div>
+                        <div class="p-4 text-gray-800">
+                            <div class="text-center py-8">
+                                <p class="text-gray-500">Your website preview will appear here</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="mt-4 px-6 py-3 bg-gradient-to-r from-purple-600 to-purple-500 rounded-lg hover:from-purple-700 hover:to-purple-600 transition-colors w-full">
+                        Generate Website <i class="fas fa-bolt ml-2"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
