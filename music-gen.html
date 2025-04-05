@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GENIVA AI - Music Generator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="enhanced_styles.css">
+</head>
+<body class="font-poppins bg-gray-900 text-white">
+    <!-- Sidebar same as other pages -->
+    
+    <div class="main-content">
+        <div class="max-w-6xl mx-auto py-8 px-4">
+            <div class="flex items-center mb-8">
+                <i class="fas fa-music text-3xl text-indigo-500 mr-4"></i>
+                <h1 class="text-3xl font-bold">Music Generator</h1>
+            </div>
+            
+            <div class="bg-gray-800/70 rounded-2xl p-6 border border-gray-700/50 shadow-lg">
+                <textarea class="w-full bg-gray-700/50 rounded-xl p-4 h-64 focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="Describe the music you want to create..."></textarea>
+                <div class="grid grid-cols-2 gap-4 mt-4">
+                    <select class="bg-gray-700/50 rounded-lg p-3">
+                        <option>Pop</option>
+                        <option>Rock</option>
+                        <option>Electronic</option>
+                        <option>Classical</option>
+                    </select>
+                    <select class="bg-gray-700/50 rounded-lg p-3">
+                        <option>30 seconds</option>
+                        <option>1 minute</option>
+                        <option>2 minutes</option>
+                    </select>
+                </div>
+                <button class="mt-4 px-6 py-3 bg-gradient-to-r from-indigo-600 to-indigo-500 rounded-lg hover:from-indigo-700 hover:to-indigo-600 transition-colors w-full">
+                    Generate Music <i class="fas fa-bolt ml-2"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
